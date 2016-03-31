@@ -19,6 +19,10 @@
     <%= f.label :name %><br>
     <%= f.collection_select(:manager_id, Employee.all, :id, :name) %>
   </div>
+  <div class="field">
+    <%= f.label :team %><br>
+    <%= f.collection_select(:team_id, Team.all, :id, :team_name) %>
+  </div>
   <div class="actions">
     <%= f.submit %>
   </div>
