@@ -16,8 +16,12 @@
     <%= f.text_field :team_name %>
   </div>
   <div class="field">
-    <%= f.label :sec_team_id %><br>
-    <%= f.text_field :sec_team_id %>
+    <%= f.label :sec_team %><br>
+    <%= f.collection_select(:sec_team_id, Team.all, :id, :team_name) %>
+  </div>
+  <div class="field">
+    <%= f.label :ter_team %><br>
+    <%= f.collection_select(:ter_team_id, Team.all, :id, :team_name) %>
   </div>
   <div class="actions">
     <%= f.submit %>
