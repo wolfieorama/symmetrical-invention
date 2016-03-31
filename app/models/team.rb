@@ -6,6 +6,6 @@ class Team < ActiveRecord::Base
   belongs_to :ter_team, class_name: "Team"
 
   #across users
-  has_many :subordinates, class_name: "Employee"
-  belongs_to :manager, class_name: "Employee"  
+  has_many :employees
+  belongs_to :manager, class_name: "Employee"
 end
