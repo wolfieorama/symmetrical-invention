@@ -7,7 +7,7 @@
 
 <p>
   <strong>Managed by:</strong>
-  <%= @employee.manager %>
+  <%= @employee.manager.name %>
 </p>
 
 <%= link_to 'Edit', edit_employee_path(@employee) %> |
