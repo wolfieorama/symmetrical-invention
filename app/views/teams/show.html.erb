@@ -6,9 +6,20 @@
 </p>
 
 <p>
-  <strong>Sec team:</strong>
-  <%= @team.sec_team %>
+  <strong>Team manager:</strong>
+  <%= @team.manager.name %>
 </p>
+
+<p>
+  <strong>Sec team:</strong>
+  <%= @team.sec_team.team_name %>
+</p>
+
+<p>
+  <strong>Ter team:</strong>
+  <%= @team.ter_team.team_name %>
+</p>
+
 
 <%= link_to 'Edit', edit_team_path(@team) %> |
 <%= link_to 'Back', teams_path %>
