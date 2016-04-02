@@ -12,12 +12,10 @@
   <% end %>
 
   <div class="field">
-    <%= f.label :employee_id %><br>
-    <%= f.text_field :employee_id %>
+    <%= f.select :employee_id, Employee.all.collect { |q| [ q.name, q.id ] } %>
   </div>
   <div class="field">
-    <%= f.label :team_id %><br>
-    <%= f.text_field :team_id %>
+    <%= f.select :team_id, Team.all.collect { |t| [ t.team_name, t.id ] } %>
   </div>
   <div class="actions">
     <%= f.submit %>
