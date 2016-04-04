@@ -11,23 +11,5 @@
 </p>
 <% end %>
 
-<% if @employee.team.present? %>
-<p>
-  <strong>Team:</strong>
-  <%= @employee.team.team_name %>
-</p>
-
-<p>
-  <strong>sec_team:</strong>
-  <%= @employee.sec_team %>
-</p>
-
-<p>
-  <strong>ter_team:</strong>
-  <%= @employee.ter_team %>
-</p>
-
-<% end %>
-
 <%= link_to 'Edit', edit_employee_path(@employee) %> |
 <%= link_to 'Back', employees_path %>

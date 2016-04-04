@@ -1,7 +1,7 @@
 class Team < ActiveRecord::Base
   #self join within teams
-  has_one :sec_team, class_name: "Team", foreign_key: "sec_team_id"
-  has_one :ter_team, class_name: "Team", foreign_key: "ter_team_id"
+  has_many :team_memberships
+  has_many :employees, through: :team_memberships
 
   #across users
   has_many :employees, foreign_key: "employee_id"
