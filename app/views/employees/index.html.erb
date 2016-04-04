@@ -15,7 +15,11 @@
     <% @employees.each do |employee| %>
       <tr>
         <td><%= employee.name %></td>
-        <td><%= employee.manager.name %><td>
+        <% if employee.manager.present? %>
+          <td><%= employee.manager.name %><td>
+        <% else %>
+          <td>I am the boss or i dont have one</td>
+        <% end %>
         <td><%= link_to 'Show', employee %></td>
         <td><%= link_to 'Edit', edit_employee_path(employee) %></td>
         <td><%= link_to 'Destroy', employee, method: :delete, data: { confirm: 'Are you sure?' } %></td>
