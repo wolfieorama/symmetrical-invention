@@ -11,10 +11,12 @@
 </p>
 <% end %>
 
+<h3><%= @employee.name %> Teams</h3>
+
 <% @employee.team_memberships.each do |team_membership| %>
-  <tr>
-    <td><%= team_membership.team_name %></td>
-  </tr>
+  <ul>
+    <li>team_membership.team.team_name</li>
+  </ul>
 <% end %>
 
 <%= link_to 'Edit', edit_employee_path(@employee) %> |

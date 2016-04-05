@@ -4,6 +4,5 @@ class Team < ActiveRecord::Base
   has_many :employees, through: :team_memberships
 
   #across users
-  has_many :employees, foreign_key: "employee_id"
   belongs_to :manager, class_name: "Employee"
 end
