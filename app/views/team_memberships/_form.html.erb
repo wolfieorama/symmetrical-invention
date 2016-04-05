@@ -1,0 +1,23 @@
+<%= form_for(@team_membership) do |f| %>
+  <% if @team_membership.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@team_membership.errors.count, "error") %> prohibited this team_membership from being saved:</h2>
+
+      <ul>
+      <% @team_membership.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+     <%= f.select :employee_id, Employee.all.collect { |e| [ e.name, e.id ] } %>
+  </div>
+  <div class="field">
+     <%= f.select :team_id, Team.all.collect { |t| [ t.team_name, t.id ] } %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
