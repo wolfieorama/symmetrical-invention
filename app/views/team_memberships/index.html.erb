@@ -14,8 +14,8 @@
   <tbody>
     <% @team_memberships.each do |team_membership| %>
       <tr>
-        <td><%= team_membership.employee %></td>
-        <td><%= team_membership.team %></td>
+        <td><%= team_membership.employee.name %></td>
+        <td><%= team_membership.team.team_name %></td>
         <td><%= link_to 'Show', team_membership %></td>
         <td><%= link_to 'Edit', edit_team_membership_path(team_membership) %></td>
         <td><%= link_to 'Destroy', team_membership, method: :delete, data: { confirm: 'Are you sure?' } %></td>

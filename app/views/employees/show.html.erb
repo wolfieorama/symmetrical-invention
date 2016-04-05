@@ -13,9 +13,9 @@
 
 <h3><%= @employee.name %> Teams</h3>
 
-<% @employee.team_memberships.each do |team_membership| %>
+<% @employee.teams.each do |team| %>
   <ul>
-    <li>team_membership.team.team_name</li>
+    <li><%= team.team_name %></li>
   </ul>
 <% end %>
 
