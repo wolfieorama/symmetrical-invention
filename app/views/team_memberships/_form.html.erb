@@ -12,7 +12,7 @@
   <% end %>
 
   <div class="field">
-     <%= f.select :employee_id, Employee.all.collect { |e| [ e.name, e.id ] } %>
+     <%= f.select :employee_id, Employee.all.collect { |q| [ q.name, q.id ] } %>
   </div>
   <div class="field">
      <%= f.select :team_id, Team.all.collect { |t| [ t.team_name, t.id ] } %>
