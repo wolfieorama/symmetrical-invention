@@ -2,12 +2,12 @@
 
 <p>
   <strong>Employee:</strong>
-  <%= @teammembership.employee %>
+  <%= @teammembership.employee.name %>
 </p>
 
 <p>
   <strong>Team:</strong>
-  <%= @teammembership.team %>
+  <%= @teammembership.team.team_name %>
 </p>
 
 <%= link_to 'Edit', edit_teammembership_path(@teammembership) %> |
